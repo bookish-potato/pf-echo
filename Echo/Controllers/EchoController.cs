@@ -22,11 +22,8 @@ namespace Echo.Controllers
 
             foreach (var (headerName, values) in Request.Headers)
             {
-                res.Add($"[Header] {headerName}", values.ToString());
+                res.Add($"Header_{headerName}", values.ToString());
             }
-
-            res.Add("[Request] Host", Request.Host.ToString());
-            res.Add("[Request] Scheme", Request.Scheme);
 
             return res;
         }
@@ -38,7 +35,7 @@ namespace Echo.Controllers
 
             foreach (var (headerName, values) in Request.Headers)
             {
-                res.Add($"[Header] {headerName}", values.ToString());
+                res.Add($"Header_{headerName}", values.ToString());
             }
 
             return res;
